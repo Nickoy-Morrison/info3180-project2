@@ -16,6 +16,7 @@ import jwt
 from functools import wraps
 
 
+
 ###
 # Routing for your application.
 ###
@@ -98,7 +99,7 @@ def login():
         
         if user != None and check_password_hash(user.password, password):
             payload = {'user': user.username}
-            jwt_token = jwt.encode(payload,app.config['SECRET_KEY'],algorithm = "HS256")
+            jwt_token = jwt.encode(payload,app.config['SECRET_KEY'],algorithm = "HS256").decode('utf-8')
             response = {'message': 'User successfully logged in','token':jwt_token, "user_id": user.id}
             
             return jsonify(response)

@@ -25,3 +25,5 @@ python-dateutil==2.7.2
 python-editor==1.0.3
 six==1.11.0
 Flask-JWT
+psycopg2-binary
+Unicode
