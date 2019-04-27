@@ -10,8 +10,8 @@ csrf = CSRFProtect(app)
 
 bcrypt = Bcrypt(app)
 app.config['SECRET_KEY'] = "this is a super secure key"  # you should make this more random and unique
-#app.config['SQLALCHEMY_DATABASE_URI'] = "postgres:"
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://project:password123@localhost/project"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://fvygwiavhypvsv:61a032f0a3c94589855fb4f2a37038b7f1bb2eb661653c58261e6bdff6bdf9f3@ec2-54-83-205-27.compute-1.amazonaws.com:5432/d1l7tft5g9sd5g"
+#app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://project:password123@localhost/project"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True  # added just to suppress a warning
 
 UPLOAD_FOLDER ='./app/static/uploads'
